@@ -99,7 +99,6 @@ function startQuiz() {
 function showQuestion() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
-  console.log(currentQuestion);
   let questionNo = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNo + "." + currentQuestion.question;
 
@@ -108,7 +107,6 @@ function showQuestion() {
     btn.innerHTML = answer.text;
     btn.classList.add("btn");
     answerButton.appendChild(btn);
-    console.log(answer.correct);
     if (answer.correct) {
       btn.dataset.correct = answer.correct;
     }
@@ -124,7 +122,6 @@ function resetState() {
 }
 
 function selectAnswer(e) {
-  console.log(e.target);
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
   if (isCorrect) {
