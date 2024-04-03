@@ -14,3 +14,9 @@ function generate() {
 }
 
 // btn.addEventListener("click", generate());
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    generate();
+  }
+});
