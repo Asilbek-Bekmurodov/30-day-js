@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --brown: #c24914;
+  --black: #000;
+  --background: #f9e0ae;
+  --grey: #8a8a8a;
+  --darkBrown: #682c0e;
+}
+.dark-mode {
+  --white: black;
+  --brown: #4f2310;
+  --black: #fff;
+  --background: #682c0e;
+  --grey: #8a8a8a;
+  --darkBrown: #682c0e;
+}
+
+body {
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background-color: var(--background);
+  padding: 30px 80px;
+}
+
+.header__logo {
+  width: 144px;
+  height: 44px;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  list-style: none;
+  gap: 56px;
+}
+
+.header__nav-item a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.header__nav-item:nth-child(3),
+.header__nav-item:nth-child(4) {
+  position: relative;
+}
+
+.header__nav-item:nth-child(3)::after,
+.header__nav-item:nth-child(4)::after {
+  content: "";
+  background-image: url("./down-arrow.svg");
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  bottom: -2px;
+  right: -25px;
+}
+
+.header__btn {
+  margin-left: 47px;
+  padding: 18px;
+  background-color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 100%;
+cursor: pointer;
+}
+
+.start {
+}
+
+.start__info {
+  padding: 149px 0;
+  background-image: url("./start.png");
+  background-size: 593px 487px;
+  background-repeat: no-repeat;
+  background-position: right 60px;
+}
+.start__title {
+  max-width: 428px;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--black);
+}
+.start__text {
+  font-size: 20px;
+  color: var(--grey);
+  max-width: 550px;
+  margin: 34px 0;
+}
+.start__btn {
+  padding: 7px 29px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--darkBrown);
+  color: var(--white);
+  z-index: 3;
+  cursor: pointer;
+}

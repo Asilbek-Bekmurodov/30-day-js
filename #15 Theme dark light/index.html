@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <img class="header__logo" src="./logo.png" alt="education logo" />
+
+          <ul class="header__nav">
+            <li class="header__nav-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">Courses</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+
+          <button id="mode" class="header__btn">
+            <img id="img" width="30" src="./sun.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="start">
+        <div class="container">
+          <div class="start__info">
+            <h1 class="start__title">Start learning with us now</h1>
+            <p class="start__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              laboriosam voluptates sed beatae?
+            </p>
+            <button class="start__btn">Start learning</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      let mode = document.getElementById("mode");
+      let img = document.getElementById("img");
+      console.log(mode);
+      mode.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          console.log(img);
+          img.src = "./moon.png";
+        }
+        else{
+          img.src = './sun.png'
+        }
+      });
+    </script>
+  </body>
+</html>
