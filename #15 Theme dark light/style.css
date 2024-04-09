@@ -90,7 +90,7 @@ body {
   justify-content: center;
   border: none;
   border-radius: 100%;
-cursor: pointer;
+  cursor: pointer;
 }
 
 .start {
@@ -123,4 +123,29 @@ cursor: pointer;
   color: var(--white);
   z-index: 3;
   cursor: pointer;
+}
+
+.center {
+}
+.center__wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  background-image: url("./center.png");
+  background-repeat: no-repeat;
+  background-size: 480px 379px;
+  height: 480px;
+}
+.center__title {
+  font-size: 48px;
+  font-weight: 600;
+  width: 407px;
+  color: var(--black);
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.center__item {
+  font-size: 24px;
+  color: var(--black);
 }
