@@ -36,7 +36,9 @@ body {
 
 .header {
   background-color: var(--background);
-  padding: 30px 80px;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
 }
 
 .header__logo {
@@ -94,6 +96,7 @@ body {
 }
 
 .start {
+  padding-top: 150px;
 }
 
 .start__info {

@@ -63,13 +63,27 @@
     <script>
       let mode = document.getElementById("mode");
       let img = document.getElementById("img");
+
+      let header = document.querySelector(".header");
+      let scrollTop = document.documentElement.scrollTop;
       mode.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
         if (document.body.classList.contains("dark-mode")) {
           console.log(img);
+          console.log();
           img.src = "./moon.png";
         } else {
           img.src = "./sun.png";
+        }
+      });
+
+      window.addEventListener("scroll", () => {
+        let scroll = this.scrollY;
+
+        if (scroll > 150) {
+          header.style.background = "red";
+        } else {
+          header.style.background = "#f9e0ae";
         }
       });
     </script>
