@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f8fd;
+}
+
+form {
+  width: 555px;
+  min-height: 500px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.form-step {
+  display: none;
+}
+
+.form__step-active {
+  display: block;
+  animation: animate 0.5s;
+  transform-origin: top;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+.input-group {
+  box-shadow: 0px 4px 4px #00000072;
+  border: 2px solid #eeeef9;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 22px;
+}
+
+.form-input {
+}
+
+.form-label {
+  font-size: 24px;
+  color: #6223cc;
+  line-height: 30px;
+}
+
+.form-text {
+  color: #747ea5;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.btn {
+  padding: 13px 18px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-prev {
+  color: black;
+  background-color: #aeaeae;
+}
+.btn-next {
+  color: white;
+  background-color: #6223cc;
+  margin-left: auto;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+.progress {
+  height: 6px;
+  width: 20%;
+  border-radius: 12px;
+  position: relative;
+  background-color: #b9b9e7;
+  overflow: hidden;
+}
+/* .progress-active {
+  background-color: #3333cc;
+  animation: line 0.5s linear;
+  transform-origin: bottom;
+} */
+
+.line {
+  display: inline-block;
+  width: 0%;
+  height: 100%;
+  background-color: #6223cc;
+  position: absolute;
+}
+
+.line-active {
+  width: 100%;
+  transition: 0.5s linear;
+}
+
+@keyframes line {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(20%);
+  }
+}
